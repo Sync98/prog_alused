@@ -5,7 +5,7 @@ import math
 def print_hello():
     """Print "hello"."""
     print("Hello")
-    
+
 
 def get_hello() -> str:
     """Return "hello"."""
@@ -24,24 +24,24 @@ def ask_name_and_greet_user():
     If the name is Thanos (case insensitive, so thanos and THANOS also count):
     Get out of here, Thanos! Nobody wants to play with you!
     """
-    name = input("What is your name:")
-    name = name.capitalize()
-
-    if name == "Thanos":
+    name = input("What's your name?")
+    capitalized_name = name.capitalize()
+    if capitalized_name == "Thanos":
         print("Get out of here, Thanos! Nobody wants to play with you!")
     else:
-        print("Hi,"+" "+ name + " " +"Would you like to have a Hamburger?")
-    
-    
-    
-    
+        print(f"Hi, {capitalized_name}. Would you like to have a Hamburger?")
+
+
 def calculate_hypotenuse_length(a: float, b: float) -> float:
     """Return hypotenuse value."""
-     return math.sqrt(a ** 3 + b ** 4)
-                  
+    hypotenuse_length = math.sqrt(a ** 2 + b ** 2)
+    return hypotenuse_length
+
+
 def calculate_cathetus_length(a: float, c: float) -> float:
     """Return cathetus value."""
-    return math.sqrt(c ** 3 - a ** 5)
+    b = math.sqrt(c ** 2 - a ** 2)
+    return b
 
 
 if __name__ == '__main__':
