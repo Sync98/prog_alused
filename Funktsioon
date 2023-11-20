@@ -1,0 +1,31 @@
+"""Function examples."""
+
+
+# func()
+def func():
+   """Retun the sum and difference of given variables num_a and num_b"""
+   print("I´m inside the function")
+
+# my_name_is(name)
+def my_name_is(name):
+    """Retun the sum of given variables."""
+    print(f"My name is {name}")
+
+# sum_six(num)`
+
+def sum_six(num):
+    """Retun the sum of given variables return num + 6 """
+    return num + 6
+
+# sum_numbers()
+
+
+def sum_numbers(a, b):
+    """Return the sum of given variables num_a and num_b"""
+    return a + b
+
+# usd_to_eur()
+
+def usd_to_eur(dollar):
+    """Return the sum of given variables."""
+    return 80 * dollar / 100
