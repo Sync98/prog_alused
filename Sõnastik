@@ -1,0 +1,47 @@
+"""Dictionary exercises."""
+
+
+def get_hobbies(hobbies_dict: dict, name: str) -> list:
+    """Return the hobbies of a given person."""
+    if name in hobbies_dict:
+        return hobbies_dict[name]
+    else:
+        return "name not in dictionary"
+
+
+def find_tallest(height_dict: dict) -> str:
+    """Return the name of the tallest person in the given dictionary."""
+    return max(height_dict, key=height_dict.get)
+
+
+def remove_sixes(six_dict: dict) -> dict:
+    """Return a dictionary where keys with values divisible by six are removed."""
+    return {key: value for key, value in six_dict.items() if value % 6 != 0}
+
+
+def exchange_keys_and_values(exchange_dict: dict) -> dict:
+    """Return a dictionary where keys and values have been exchanged."""
+    return {value: key for key, value in exchange_dict.items()}
+
+
+def count_symbol_appearances(stringy: str) -> dict:
+    """Return a dictionary where keys are symbols and values are their counts."""
+    symbol_count = {}
+    for symbol in stringy:
+        if symbol in symbol_count:
+            symbol_count[symbol] += 1
+        else:
+            symbol_count[symbol] = 1
+    return symbol_count
+
+
+def organise_by_first_symbol(strings: list) -> dict:
+    """Return a dictionary organizing words by first letter."""
+    organized_dict = {}
+    for word in strings:
+        first_letter = word[0]
+        if first_letter in organized_dict:
+            organized_dict[first_letter].append(word)
+        else:
+            organized_dict[first_letter] = [word]
+    return organized_dict
