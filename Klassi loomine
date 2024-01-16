@@ -1,28 +1,15 @@
+"""Simple class."""
+
+
 class Student:
+    """Student class."""
 
     def __init__(self, name):
-        """Initializes a new student object.
+        """Student class construct.
 
-        Args:
-            name (str): The student's name.
+        Creates student type object.
+        Parameters:
+        n (str): Name of student.
         """
         self.name = name
         self.finished = False
-
-    def get_name(self):
-        """Retrieves the student's name.
-
-        Returns:
-            str: The student's name.
-        """
-        return self.name
-
-    def is_finished(self):
-        """Checks if the student has completed their coursework.
-
-        Returns:
-            bool: True if the student has completed their coursework, False otherwise.
-        """
-        return self.finished
-
-student = Student("John")  # Creates a new student named John
